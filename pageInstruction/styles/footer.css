@@ -1,0 +1,30 @@
+footer {
+    width: 100%;
+    background-color: var(--corPreta);
+    color: var(--corCinzaEscura);
+    padding: 10px 0px;
+    margin-top: 80px;
+}
+
+footer > p {
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer > p > a {
+    color: var(--corRoxa);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer > p > a:hover {
+    color: var(--corVerde);
+}
+
+footer > p > a:active {
+    color: var(--corVerde);
+}

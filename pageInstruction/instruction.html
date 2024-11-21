@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainSync</title>
+    <link rel="shortcut icon" href="../assets/image/logo-brainsync.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/small-screens.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div id="logoContainer">
+            <img src="../assets/image/logo-brainsync.jpeg" alt="Logo BrainSync">
+        </div>
+        <h1>BrainSync</h1>
+        <nav>
+            <div class="menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="navList">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="instruction.html">Instrução</a></li>
+                <li><a href="../pageAbout/about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <main>
+        <h2>Instrução</h2>
+        <h3>HARDWARE:</h3>
+        <ul>
+            <li>1 x Pílula BioAmp EXG (com conector JST PH 2.0 e um pino header)</li>
+            <li>1 x Cabo BioAmp</li>
+            <li>3 x Eletrodos de gel</li>
+            <li>3 x Cabos jumper</li>
+            <li>1 x Arduino Uno / Maker Uno com cabo USB (Você também pode usar qualquer outra placa microcontroladora com ADC)</li>
+            <li>1 x Lenço umedecido</li>
+        </ul>
+        <h3>SOFTWARE:</h3>
+        <ul>
+            <li>Arduino IDE</li>
+            <li>BrainSync (para monitoramento cognitivo em ambientes educacionais)</li>
+        </ul>
+
+        <h3>Passo 1: Montagem</h3>
+        <p>Pílula BioAmp EXG separadamente, será necessário montá-la para este projeto, soldando os pinos header e o conector JST PH 2.0 conforme o diagrama.</p>
+        <img id="pilula" src="image/BioAmp-EXG-Pill.webp" alt="Pílula BioAmp EXG">
+
+        <h3>Passo 2: Preparação da Pele</h3>
+        <p>Limpe a superfície da pele onde os eletrodos serão colocados utilizando um lenço umedecido. Esfregue bem a área para remover células mortas e qualquer sujeira presente na pele. Certifique-se de que a área esteja limpa e seca antes de prosseguir com a colocação dos eletrodos.</p>
+
+        <h3>Passo 3: Conectando o Cabo do Eletrodo</h3>
+        <p>Conecte o Cabo BioAmp à Pílula BioAmp EXG. Temos diferentes variantes do Cabo BioAmp, então não se baseie na codificação das cores, foque nas marcações REF, IN+ e IN- na Pílula BioAmp EXG.</p>
+        <video id="eletrodo" src="image/cabo-eletrodo.mp4" controls preload="metadata"></video>
+
+        <h3>Passo 4: Posicionamento dos Eletrodos</h3>
+        <p>Antes de avançar com este projeto, entenda como colocar os eletrodos. Para registrar EEG da parte do córtex pré-frontal do cérebro, você deve colocar os eletrodos na testa, especificamente nas posições Fp1 e Fp2 (consulte o sistema internacional 10-20 para a gravação de EEG).</p>
+        <img id="cerebro-10-20" src="image/Sistema-Internacional-10-20.jpeg" alt="Sistema Internacional 10-20">
+
+        <h3>Passo 5: Conexões</h3>
+        <p>Conecte a BioAmp EXG Pill ao Arduino Uno usando os cabos jumper conforme indicado abaixo:</p>
+        <ul>
+            <li>VCC para 5V</li>
+            <li>GND para GND</li>
+            <li>OUT para A0</li>
+        </ul>
+        <img id="arduino" src="image/conexao-arduino.webp" alt="Conexão entre BioAmp e Arduino">
+
+        <p>Nota: TENHA MUITO CUIDADO e siga o diagrama acima ao fazer as conexões entre a BioAmp EXG Pill e o Arduino Uno, especialmente GND e VCC, pois isso pode danificar o sensor.</p>
+
+        <h3>Passo 6: Baixar o Arduino IDE e Configurá-lo</h3>
+        <p>Baixe o Arduino IDE no site oficial:</p>
+        <p><a href="https://www.arduino.cc/en/software" target="_blank">https://www.arduino.cc/en/software</a></p>
+        <p>Após o download, conecte o Arduino Uno ao seu computador utilizando o cabo USB (Tipo A para Tipo B). Certifique-se de que o Arduino está funcionando corretamente.</p>
+        <p>Nota: Para obter os melhores resultados de aquisição de sinal, evite conectar o laptop ao carregador e mantenha-se a pelo menos 5 metros de distância de aparelhos elétricos como ventiladores ou aparelhos de ar-condicionado.</p>
+
+        <h3>Passo 7: Configurar o BrainSync com o Arduino</h3>
+        <p>Com o Arduino Uno já conectado e configurado, utilize o software BrainSync para monitorar os sinais EEG captados pela Pílula BioAmp EXG. O código necessário para o Arduino e a integração com o BrainSync estão disponíveis juntos no projeto, simplificando a configuração e o funcionamento do sistema.</p>
+        <p>O Arduino será responsável por processar e transmitir os dados captados pela Pílula BioAmp EXG, enquanto o BrainSync realizará a análise cognitiva em tempo real.</p>
+        <p>Acesse <a href="#" target="_blank">aqui</a> para obter os códigos e seguir os passos detalhados para integração.</p>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="https://www.instagram.com/wolterzx/" target="_blank">Mychael Wolter</a> para fins educacionais.</p>
+        <p>Baseado no trabalho de <a href="https://github.com/kitschpatrol" target="_blank">Erik Mika</a>. Acesse o trabalho original <a href="https://github.com/kitschpatrol/BrainGrapher" target="_blank">aqui</a>. Todos os direitos autorais reservados a <a href="https://github.com/kitschpatrol" target="_blank">Erik Mika</a>.</p>
+        <p>Este site é destinado apenas a fins educacionais. O conteúdo aqui apresentado pode não ser preciso ou completo. Consulte fontes oficiais para obter informações precisas.</p>
+    </footer>
+    <script src="../assets/scripts/navbar.js"></script>
+</body>
+</html>

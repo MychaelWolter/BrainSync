@@ -1,0 +1,75 @@
+main {
+    flex: 1 1 auto;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#startButton {
+    background-color: var(--corVerde);
+    color: var(--corBranca);
+    font-weight: bold;
+}
+
+#startButton:hover {
+    background-color: var(--corVerdeMedio);
+}
+
+#startButton:active {
+    background-color: var(--corVerdeMedio);
+    border: none;
+}
+
+#stopButton {
+    background-color: var(--corVermelha);
+    color: var(--corBranca);
+    font-weight: bold;
+}
+
+#stopButton:hover {
+    background-color: var(--corVermelhaMedio);
+}
+
+#stopButton:active {
+    background-color: var(--corVermelhaMedio);
+    border: none;
+}
+
+#status {
+    font-size: 1em;
+    color: var(--corPreta);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#canvasContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 450px;
+    background: var(--corBrancaMedia);
+    border-radius: 10px;
+}
+
+#canvasContainer canvas {
+    border: 1px solid var(--corCinza);
+    border-radius: 20px;
+}

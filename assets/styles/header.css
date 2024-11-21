@@ -1,0 +1,110 @@
+header {
+    background-color: var(--corPreta);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+#logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    margin: 20px 0;
+}
+
+#logoContainer > img {
+    width: 30px;
+    height: 30px;
+}
+
+h1 {
+    color: var(--corBranca);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.menu {
+    display: block;
+    cursor: pointer;
+}
+
+.menu div {
+    width: 20px;
+    height: 2px;
+    background: var(--corBranca);
+    margin: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menu.active .line2 {
+    opacity: 0;
+}
+
+.menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 20vw;
+    height: 25vh;
+    background-color: var(--corPreta);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.navList.active {
+    transform: translateX(0);
+}
+
+.navList li {
+    opacity: 0;
+    animation: navLinkFade 0.5s ease forwards;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.navList li a {
+    color: var(--corBranca);
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.navList li:hover a {
+    opacity: 0.7;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(20vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,21 @@
+@media (width <=700px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    .navList {
+        width: 40vw;
+        height: 25vh;
+    }
+
+    .navList li a {
+        font-size: 0.7em;
+    }
+}
+
+@media(width <= 920px) and (width > 700px) {
+    .navList {
+        width: 30vw;
+        height: 26vh;
+    }
+}
