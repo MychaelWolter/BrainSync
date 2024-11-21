@@ -25,6 +25,10 @@ p {
     text-indent: 30px;
 }
 
+main ul {
+    margin-bottom: 5px;
+}
+
 main ul li {
     list-style: circle;
     list-style-position: inside;
